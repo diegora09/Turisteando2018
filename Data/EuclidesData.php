@@ -8,10 +8,10 @@ class EuclidesData {
     public function determinarLugares() {
         // esto se debe recibir por parametros
         $filtros = [];
-        array_push($filtros, 1);
+        array_push($filtros, 2);
         array_push($filtros, 10);
-        array_push($filtros, 10);
-        array_push($filtros, 10);
+        array_push($filtros, 20);
+        array_push($filtros, 40);
         //conecta con la base de datos y ejecuta una consulta
         $connection = new Connection();
         $conn = $connection->getConnection();
@@ -88,7 +88,7 @@ class EuclidesData {
             //si el resultado final del algoritmo es menor al valor mas bajo actual entonces el valor mas bajo pasa
             //a vale lo mismo que el resultado
             //y se guarda el estilo actual
-            else if ($resultado <= $valorMasBajo) {
+            else if ($resultado <= $valorMasBajo + 10) {
                 $valorMasBajo = $resultado;
                 $id = $row['id'];
 
@@ -101,6 +101,58 @@ class EuclidesData {
             $cont++;
         }
 
+        $Op1 = [];
+        $Op2 = [];
+        $Op3 = [];
+        if (count($lugaresParaMostrar) == 6) {
+            for ($i = 0; $i <= count($lugaresParaMostrar); $i++) {
+                if ($i < 2) {
+                    array_push($Op1, $lugaresParaMostrar[$i]);
+                } else if ($i < 4) {
+                    array_push($Op2, $lugaresParaMostrar[$i]);
+                } else {
+                    array_push($Op3, $lugaresParaMostrar[$i]);
+                }
+            }
+        } else if (count($lugaresParaMostrar) > 6) {
+            if (count($lugaresParaMostrar) == 7) {
+                for ($i = 0; $i <= count($lugaresParaMostrar); $i++) {
+                    if ($i < 3) {
+                        array_push($Op1, $lugaresParaMostrar[$i]);
+                    } else if ($i < 5) {
+                        array_push($Op2, $lugaresParaMostrar[$i]);
+                    } else {
+                        array_push($Op3, $lugaresParaMostrar[$i]);
+                    }
+                }
+            } else if (count($lugaresParaMostrar) == 8 || count($lugaresParaMostrar) == 9) {
+                for ($i = 0; $i <= count($lugaresParaMostrar); $i++) {
+                    if ($i < 3) {
+                        array_push($Op1, $lugaresParaMostrar[$i]);
+                    } else if ($i < 6) {
+                        array_push($Op2, $lugaresParaMostrar[$i]);
+                    } else {
+                        array_push($Op3, $lugaresParaMostrar[$i]);
+                    }
+                }
+            } else {
+                for ($i = 0; $i <= count($lugaresParaMostrar); $i++) {
+                    if ($i < 4) {
+                        array_push($Op1, $lugaresParaMostrar[$i]);
+                    } else if ($i < 8) {
+                        array_push($Op2, $lugaresParaMostrar[$i]);
+                    } else {
+                        array_push($Op3, $lugaresParaMostrar[$i]);
+                    }
+                }
+            }
+        }
+
+        $lugaresParaMostrar = [];
+        array_push($lugaresParaMostrar, $Op1);
+        array_push($lugaresParaMostrar, $Op2);
+        array_push($lugaresParaMostrar, $Op3);
+        
         return $lugaresParaMostrar;
     }
 
@@ -109,6 +161,11 @@ class EuclidesData {
 include_once '../Data/EuclidesData.php';
 $obj = new EuclidesData();
 $lugares = $obj->determinarLugares();
+$num = 1;
 foreach ($lugares as $valor) {
-    echo $valor['id'] . " --- ";
+    echo '**'.$num.'**';
+    foreach ($valor as $xxx) {
+        echo $xxx['id'] . " --- ";
+    }
+    $num++;
 }
