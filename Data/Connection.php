@@ -15,7 +15,7 @@ class Connection {
      * Método que permite conectar con la base de datos
      */
     public function getConnection() {
-        $this->connection = mysqli_connect("163.178.107.130", "laboratorios", "UCRSA.118", "tarea_1_sistemas_expertos_b45770");
+        $this->connection = mysqli_connect("163.178.107.130", "laboratorios", "UCRSA.118", "turisteando2018");
         return $this->connection;
     }
 
