@@ -1,6 +1,9 @@
 <?php
 include('../Sesion/session.php');
 ?>
+<?php
+include('../Sesion/session.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
