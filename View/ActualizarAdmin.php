@@ -13,47 +13,10 @@
 <?php
 	include("navbar.php");
 ?>
-	<div class="wrapper row1">
-		<div class="container border border-success" style="width: 1100px;">    
-		<form class="form-horizontal">
-			<div class="form-group " >
-				<h3 style="text-align: center;"" class="text-success">Actualizar Administrador</h3>
-				</div>
-				<br>
-				<form name="crearAdmin" action="" method="post">
-					<div class="form-group " >
-					<label for="name" class="control-label col-md-4">Nombre:</label>
-					<div class="col-md-4">
-						<input class="form-control" type="text" placeholder="name" id="name">
-					</div> 
-					</div>
-					<div class="form-group " >
-					<label for="user" class="control-label col-md-4">Usuario:</label>
-					<div class="col-md-4">
-						<input class="form-control" type="text" placeholder="user" id="user">
-					</div>
-					</div>
-					<div class="form-group " >
-					<label for="password" class="control-label col-md-4">Contraseña:</label>
-					<div class="col-md-4">
-						<input class="form-control" type="password" placeholder="password" id="password">
-					</div> 
-					</div>
-					<div class="form-group ">
-						<div class="col-md-6 col-md-offset-4">
-							<input type="submit" class="btn btn-success col-md-8" value="Actualizar" id="btnActualizar">
-						</div>
-					</div>
-  
-				</form>
-			</div>
-  
-		</form>
-		</div>>
-	</div>
-	
+	<?php include "formulario.php";?>
+
 	<?php
 	include("footer.php");
 	?>
 	</body>
-</html>
+</html> 

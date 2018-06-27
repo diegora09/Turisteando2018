@@ -1,8 +1,3 @@
-<?php
-     //include_once '../Business/CountryBusiness.php';
-   //$countryBusiness = new CountryBusiness();
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,14 +17,8 @@
 				<div class="w3l-pricing-grids">
 					<div class="agileits-pricing-grid first">
 						<div class="pricing_grid">
-						 <?php 
-						//$airportBusiness = new AirportBusiness();
-						//$myAirports = $airportBusiness->getAirports($_GET["id"]);	
-						?>
 							<div class="wthree-pricing-info pricing-top green-top" width="300" height="500">
 								<img src="../images/lugar.jpg" width="200" height="200">
-								
-								<img src="../images/<?php echo $currentAirport->runwaysAirport ?>" width="200" height="200">
 							</div>
 							<br><br>
 							<div class="wthree-pricing-info pricing-top green-top">
@@ -42,10 +31,6 @@
 								<div class="pricing-bottom-bottom">
 									<p>Una descripción se define como un texto en el que están relatados los rasgos o características más importantes de un objeto, lugar o también animal.
 									Una descripción se define como un texto en el que están relatados los rasgos o características más importantes de un objeto, lugar o también animal.	
-									
-									<?php
-										echo ($_GET["nombre"]) . '!';
-									?>
 									<p>
 								</div>
 								
@@ -82,10 +67,6 @@
 		});
 																						
 	});
-	
-	function (){
-		
-	}
 	</script>
 	<!-- //Pop-up for pricing tables -->
 	</body>

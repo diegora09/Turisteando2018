@@ -17,14 +17,8 @@
               <li><a href="CrearAdmin.php">Insertar administrador</a></li>
 
           </ul>
-        </li>       
-        <li><a class="drop" href="">Sobre nosotros</a>
-          <ul>
-              <li><a href="SobreNosotrosAdmin.php">Actualizar sobre nosotros</a></li>
-
-          </ul>
-        </li>         
-        <li><a href="../Login/Login.php">Salir</a></li>
+        </li>                
+        <li><a href="../Sesion/logout.php">Salir</a></li>
       </ul>
       <!-- ################################################################################################ -->
     </nav>

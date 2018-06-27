@@ -1,3 +1,6 @@
+<?php
+include('../Sesion/session.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,16 +19,16 @@
 
 	<div class="wrapper row1">
 	<div class="container border border-success" style="width: 1100px;">    
-		<form class="form-horizontal">
+		<form class="form-horizontal" action="../Business/EliminarAdminAction.php" method="post">
 		<br>
 		<div class="form-group " >
 			<h3 style="text-align: center;"" class="text-success">Lista de Administradores</h3>
 		</div>
 		<center>
-		<table>
+		<table class="table">
 			<tr>
-				<th>Nombre</th>
-				<th>Usuario</th>
+				<th style="text-align: center;">Nombre</th>
+				<th style="text-align: center;">Usuario</th>
 				<th></th>
 				<th></th>
 			</tr>
@@ -39,12 +42,15 @@
 				for($i=0; $i<$size; $i++) {
 					$admin = $listaAdmin[$i];
 				?>
+			
 					<tr>
-						<td><?php echo $admin[1]; ?></td>
-						<td><?php echo $admin[2]; ?></td>
-						<td><input type="button" value="Actualizar" onclick="javascript:cambia_de_pagina();" /></td>
-						<td><input type="button" value="Eliminar" name="btnEliminar" id="btnEliminar" /></td>
+						<td style="text-align: center;" id="name"><?php echo $admin[1]; ?></td>
+						<td style="text-align: center;" id="user" ><?php echo $admin[2]; ?></td>
+						<td style="text-align: center;" id="id" hidden="true"><?php echo $admin[0]; ?></td>
+						<td style="text-align: center;"><input class="btn btn-sucess" type="button" value="Actualizar" onclick="javascript:cambia_de_pagina(<?php echo $admin[0]; ?>);" /></td>
+						<td style="text-align: center;" ><input class="btn" type="button" value="Eliminar" name="btnEliminar" id="btnEliminar" onclick="javascript:eliminar(<?php echo $admin[0]; ?>);" /></td>
 					</tr>
+					<br>
 				<?php
 				}
 			?>
@@ -60,9 +66,16 @@
 	</body>
 	
 	<script>
-		function cambia_de_pagina(){
-			location.href="./ActualizarAdmin.php"
+		function cambia_de_pagina(id){
+			location.href="./ActualizarAdmin.php?id="+id
 		}
+		function eliminar(id){
+
+			location.href="../Business/EliminarAdminAction.php?id="+id
+
+		}
+
+
 	</script>
 	
 </html>

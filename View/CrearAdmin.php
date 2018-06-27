@@ -11,32 +11,34 @@
 </head>
 <body>
 <?php
-	include("navbar.php");
+	include("navbar.php"); 
 ?>
 	<div class="wrapper row1">
 		<div class="container border border-success" style="width: 1100px;">    
-		<form class="form-horizontal">
 			<div class="form-group " >
+				<figure style="text-align: center;"><a><img src="../images/icon.png" style="text-align: center; width: 200px;height: 200px;" alt=""></a>
+		        </figure>
+		        <br>
 				<h3 style="text-align: center;"" class="text-success">Crear Administrador</h3>
 				</div>
 				<br>
-				<form name="crearAdmin" action="../Business/CrearAdminAction.php" method="post">
+				<form name="crearAdmin" class="form-horizontal" action="../Business/CrearAdminAction.php" method="post">
 					<div class="form-group " >
 					<label for="name" class="control-label col-md-4">Nombre:</label>
 					<div class="col-md-4">
-						<input class="form-control" type="text" placeholder="name" id="name">
+						<input class="form-control" type="text" placeholder="name" id="name" name="name">
 					</div> 
 					</div>
 					<div class="form-group " >
 					<label for="user" class="control-label col-md-4">Usuario:</label>
 					<div class="col-md-4">
-						<input class="form-control" type="text" placeholder="user" id="user">
+						<input class="form-control" type="text" placeholder="user" id="user" name="user">
 					</div>
 					</div>
 					<div class="form-group " >
 					<label for="password" class="control-label col-md-4">Contraseña:</label>
 					<div class="col-md-4">
-						<input class="form-control" type="password" placeholder="password" id="password">
+						<input class="form-control" type="password" placeholder="password" id="password" name="password">
 					</div> 
 					</div>
 					<div class="form-group ">
@@ -48,7 +50,6 @@
 				</form>
 			</div>
   
-		</form>
 		</div>
 	</div>
 	

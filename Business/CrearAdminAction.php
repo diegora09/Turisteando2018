@@ -13,4 +13,5 @@ array_push($adminArray, $password);
 
 $adminBusines = new AdminBusiness();
 $adminBusines->crearAdmin($adminArray);
-header("location:../View/ListaAdmin.php");
+
+header("location:../View/ListaAdmin.php?name=".$name);

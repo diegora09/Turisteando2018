@@ -1,3 +1,6 @@
+<?php
+include('../Sesion/session.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,9 +18,9 @@
 ?>
   <div class="wrapper row1">
   <div class="container border border-success" style="width: 1100px;">    
-  <h3 style="text-align: center;"" class="text-success">Bienvenido a Turisteando</h3>
+  <h3 style="text-align: center;"" class="text-success">Bienvenido <?php echo $login_session; ?> a Turisteando</h3>
   <br>    
-  <div class="wrapper bgded" <a href="#"><img src="../images/6.jpg" alt=""></a>>
+  <div class="wrapper bgded" <a href="#"><img src="../images/6.jpg" alt=""></a>
   <div class="hoc split clear">
     <section> 
       <!-- ################################################################################################ -->

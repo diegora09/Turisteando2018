@@ -7,7 +7,7 @@
         <li><a href="../View/filtradoLugares.php">Filtrar búsquedas</a></li>
         <li><a href="../View/SobreNosotros.php">Sobre nosotros</a></li>
         <li><a href=../View/mapaDelSitio.php>Mapa del sitio</a></li>
-        <li><a href="../Login/Login.php">Ingresar</a></li>
+        <li><a href="../Sesion/index.php">Ingresar</a></li>
       </ul>
       <!-- ################################################################################################ -->
     </nav>

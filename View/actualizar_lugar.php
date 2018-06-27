@@ -13,70 +13,10 @@
 <?php
   include("navbar.php");
 ?>
-  <div class="wrapper row1">
-  <div class="container border border-success" style="width: 1100px;">    
-  <form class="form-horizontal">
-    <div class="form-group " >
-      <h3 style="text-align: center;"" class="text-success">Actualizar Lugares Turisticos</h3>
-      <br>
-      <label for="Nombre" class="control-label col-md-4">Nombre:</label>
-      <div class="col-md-4">
-        <input class="form-control" type="text" placeholder="Nombre" id="Nombre">
-      </div>
-    </div>
-
-  <div class="form-group">
-    <label for="descripcion" class="control-label col-md-4 ">Descripción: </label>
-    <div class="col-md-4">
-      <input class="form-control" type="textarea" placeholder="Descripción" id="descripcion">
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="ubicacion" class="control-label col-md-4 ">Ubicación: </label>
-    <div class="col-md-2">
-      <input class="form-control" type="url" placeholder="Latitud" id="lat">
-    </div>
-    <div class="col-md-2">
-      <input class="form-control" type="url" placeholder="Longitud" id="long">
-    </div>
-  </div>
-  <div class="form-group">
-    <label for="ubicacion" class="control-label col-md-4 ">Sitios Vecinos: </label>
-    <div class="dropdown col-md-4">
-      <button class="btn btn-secundary dropdown-toggle col-md-12" type="button" data-toggle="dropdown">Seleccione
-      </button>
-      <ul class="dropdown-menu">
-        <li><a href="#">Barcelo</a></li>
-        <li><a href="#">Wagelia</a></li>
-        <li><a href="#">Turire</a></li>
-      </ul>
-    </div>
-  </div>
+<?php
+  include("formularioLugar.php");
+?>
   
-  <div class="form-group ">
-      <label for="file" class="control-label col-md-4 ">Seleccione una imagen</label>
-      <div class="col-md-4">
-        <input type="file" class="form-control-file btn btn-secundary dropdown-toggle col-md-12" id="File">
-      </div>
-  </div>
-
-  <div class="form-group ">
-      <label for="file" class="control-label col-md-4 ">Seleccione un video</label>
-      <div class="col-md-4">
-        <input type="file" class="form-control-file btn btn-secundary dropdown-toggle col-md-12" id="File">
-      </div>
-  </div>
-
-  <div class="form-group ">
-      <div class="col-md-6 col-md-offset-4">
-        <input type="button" class="btn btn-success col-md-8" value="Guardar" id="BtnGuardar">
-      </div>
-  </div>
-  
-  </form>
-  </div>
-</div>
-<br>
 <?php
   include("footer.php");
   ?>

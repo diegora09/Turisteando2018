@@ -1,0 +1,27 @@
+/*
+	Photon by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+/* Header */
+
+	body.is-preload  .inner {
+		-moz-transform: none;
+		-webkit-transform: none;
+		-ms-transform: none;
+		transform: none;
+		opacity: 1;
+	}
+
+		body.is-preload .inner .actions {
+			-moz-transform: none;
+			-webkit-transform: none;
+			-ms-transform: none;
+			transform: none;
+			opacity: 1;
+		}
+
+	body.is-preload  {
+		opacity: 0;
+	}
